@@ -1,0 +1,31 @@
+HandleAck() = [ack(ste.sn)]{
+				if(ack==suc){
+					sendBuffer.drop(ste);
+				}
+				else{
+					dests = {(ip rip,sn rsn) | rip in pi(rt,1) && get(rt,rip).nextHop == get(rt,dip).nextHop && rsn==get(rt,rip).sqn}
+					forall dip in pi(rt,1){
+						get(rt,dip).sqn.inc();
+					}
+					pre = {(id preid) | preid in get(rt,rid).pre && rid in pi(dests,1)}
+					<event>
+					groupcast(pre, rrerType, dests, selfip)
+					</event>
+				}
+				endif
+			}
+bool rtUpdate(ip dest, sn sn,bool isknow,bool isvalid,int hops,ip src,setof ip pre ){
+	if(!(dest in pi(rt,1)))
+		update(dest,sn,isknow,isvalid,hops,src,pre);
+	else{
+		if(rt.get(dest).valid==false)
+			update(dest,sn,isknow,isvalid,hops,src,pre);
+		elseif(sn > rt.get(dest).sn)
+			update(dest,sn,isknow,isvalid,hops,src,pre);
+		elseif(sn == rt.get(dest).sn && hops < rt.get(dest).hops)
+			update(dest,sn,isknow,isvalid,hops,src,pre);
+		endif
+	}
+	endif
+}
+$			

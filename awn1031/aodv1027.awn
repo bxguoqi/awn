@@ -1,0 +1,187 @@
+AODV() = HandleMsg() ||| SendMsg() ||| RecMsg()
+HandleMsg() = [!recBuffer.isEmpty()]{
+				msg = recBuffer.pop();
+				if(msg.type == newpktType)
+					newpkt(msg.da , msg.dip);
+				elseif(msg.type == pktType)
+					pkt(msg.da , msg.dip , msg.oip);
+				elseif(msg.type == rreqType){
+					rtUpdate(msg.sip, 0, unk, val, 1, msg.sip, null);
+					rreq(msg.hops , msg.rreqid , msg.dip , msg.dsn , msg.dsk , msg.oip , msg.osn , msg.sip);
+				}
+				elseif(msg.type == rrepType){
+					rtUpdate(msg.sip, 0, unk, val, 1, msg.sip, null);
+					rrep(msg.hops , msg.dip , msg.dsn , msg.oip , msg.sip);
+				}
+				elseif(msg.type == rerrType){
+					rtUpdate(msg.sip, 0, unk, val, 1, msg.sip, null);
+					rerr(msg.dests , msg.sip);
+				}
+				endif
+			}
+SendMsg() = [!sendBuffer.isEmpty()]{
+				ste = sendBuffer.top();
+				rte=get(rt,ste.dip);
+				if(rte.valid)
+					<event>
+					unicast(rte.nextHop,ste.pktType,pktMsg(ste.da,ste.dip,selfip)) -> 
+					SendMsg() 
+					|||
+					HandleAck()
+					</event>
+				elseif(ste.req){
+					ste.req = false;
+					selfsn.inc();
+					selfrreqid.inc();
+					rreqs.add(rreq(ste.dip,rreqid));
+					<event>
+					broadcast(rreqType, rreq(0,selfrreqid,dip,rte.sqn,rte.kno,selfip,selfsn,selfip))->
+					SendMsg()
+					</event>
+				}
+				endif
+			}
+HandleAck() = [ack(ste.sn)]{
+				if(ack==suc){
+					sendBuffer.drop(ste);
+				}
+				else{
+					dests = {(ip rip,sn rsn) | rip in pi(rt,1) && get(rt,rip).nextHop == get(rt,dip).nextHop && rsn==get(rt,rip).sqn}
+					forall dip in pi(rt,1){
+						get(rt,dip).sqn.inc();
+					}
+					pre = {(id preid) | preid in get(rt,rid).pre && rid in pi(dests,1)}
+					<event>
+					groupcast(pre, rrerType, dests, selfip)
+					</event>
+				}
+				endif
+			}
+
+RecMsg() = rec() -> 
+			{
+				if(msg.type == ack)
+					setack(msg.sn);
+				else
+					recBuffer.push(msg);
+				endif
+			}
+			-> RecMsg()
+
+void newpkt(data da ,ip dip){
+	if(dip==selfip){
+		deliver(da);
+		<event>
+		HandleMsg()
+		</event>
+	}else{
+		store.add(da, dip);
+		<event>
+		HandleMsg()
+		</event>
+	}endif
+}
+void pkt(data da ,ip dip ,ip oip){
+	if(dip==selfip){
+		deliver(da);
+		<event>
+		HandleMsg()
+		</event>
+	}else{
+		if(dip in pi(rt,1)){
+			rte = get(rt,dip);
+			if(rte.valid){
+				unicastBuf(rte.nextHop,da,pktMsg(da,dip,oip));
+			}else
+				<event>
+				groupcast(rte.pre, rrerType, rerr(set(dip,rte.sqn),selfip), selfip)->
+				HandleMsg()
+				</event>
+			endif
+		}else
+			<event>
+			HandleMsg()
+			</event>
+		endif
+	}endif			
+}
+void rreq(int hops ,sn rreqid ,ip dip ,sn dsn ,bool dsk ,ip oip ,sn osn ,ip sip){
+	if(rreq(oip, rreqid) in rreqs)
+		<event>
+		HandleMsg()
+		</event>
+	else{
+		rtUpdate(oip, osn, true, true, hops+1, sip, null);
+		rreqs.add(rreq(oip, rreqid));
+		if(dip==selfip){
+			selfsn = max(selfsn, dsn);
+			unicastBuf(get(rt,oip).nhop, rrep(0 , dip , selfsn , oip , selfip));
+		}else{
+			rte = get(rt,dip);
+			if(rte.valid && dsn<= rte.sqn && rte.kno == true){
+				rte.pre.add(sip);
+				rte2 = get(rt,oip);
+				rte2.pre.add(rte.nhop);
+				unicastBuf(get(rt,oip).nhop, rrep(rte.hops , dip , rte.sqn , oip , selfip));
+			}else
+				<event>
+				broadcast(rreqType, rreq(hops+1 , rreqid , dip , dsn, dsk, oip , osn , selfip))->
+				HandleMsg()
+				</event>
+			endif
+		}endif
+	}endif
+}
+void rrep(int hops ,ip dip ,sn dsn ,ip oip ,ip sip){
+	if(rtUpdate(dip,dsn,true,true,hops+1,sip,null)){
+		if(oip==selfip)
+			<event>
+			HandleMsg()
+			</event>
+		else{
+			rte = get(rt,oip);
+			if(rte.valid){
+				rte.pre.add(sip);
+				rte2 = get(rt,dip);
+				rte2.pre.add(rte.nhop);
+				unicastBuf(rte.nhop , rrep(hops+1 , dip , dsn , oip , selfip));
+			}else
+				<event>
+				HandleMsg()
+				</event>
+			endif
+		}endif
+	}else{
+		<event>
+		HandleMsg()
+		</event>
+	}endif
+}
+void rerr(setof des dests ,ip sip){
+	dests = {(ip rip,sn rsn) | (rip, rsn) in dests && rip in pi(rt,1) && get(rt,rip).nhop == sip && get(rt.rip).sqn < rsn}
+	forall dip in PI(dests,1){
+		get(rt,dip).valid = false;
+		get(store,dip).req = true;
+	}
+	pre = {(ip preip)| preip in pi(dests,1)}
+	newdests = {(ip rip,sn rsn)| (rip, rsn) in dests && get(rt,rip).pre != null}
+	<event>
+    groupcast(pre ,rrerType, newdests , selfip)->
+	HandleMsg()
+	</event>
+}
+bool rtUpdate(ip dest, sn sn,bool isknow,bool isvalid,int hops,ip src,setof ip pre ){
+	if(!(dest in pi(rt,1)))
+		update(dest,sn,isknow,isvalid,hops,src,pre);
+	else{
+		if(rt.get(dest).valid==false)
+			update(dest,sn,isknow,isvalid,hops,src,pre);
+		elseif(sn > rt.get(dest).sn)
+			update(dest,sn,isknow,isvalid,hops,src,pre);
+		elseif(sn == rt.get(dest).sn && hops < rt.get(dest).hops)
+			update(dest,sn,isknow,isvalid,hops,src,pre);
+		endif
+	}
+	endif
+}
+$

@@ -1,0 +1,45 @@
+/**
+ * 
+ */
+package test;
+
+import java.io.FileInputStream;
+
+
+import org.antlr.v4.runtime.*;
+import org.antlr.v4.runtime.tree.*;
+
+import antlr.MyVisitor;
+import antlr.awn1027BaseVisitor;
+import antlr.awn1027Lexer;
+import antlr.awn1027Parser;
+
+/**
+ * @author Administrator
+ *
+ */
+public class Tester {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+		
+		//create a Char Stream that reads from standard input
+		ANTLRInputStream input=new ANTLRInputStream(new FileInputStream("expr.awn"));
+		//create a lexer that feeds off of input CharStream
+		awn1027Lexer lexer=new awn1027Lexer(input);
+		//create a buffer of tokens pulled from the lexer
+		CommonTokenStream tokens=new CommonTokenStream(lexer);
+		//create a parser that feeds off the tokens buffer
+		awn1027Parser parser=new awn1027Parser(tokens);
+		ParseTree tree=parser.start();//begin parsing at init rule
+		
+		awn1027BaseVisitor eval=new awn1027BaseVisitor<Tnode>();
+		eval.visit(tree);
+		
+		System.out.println(tree.toStringTree(parser));//print LISP-style tree
+	}
+
+}

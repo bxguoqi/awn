@@ -22,11 +22,11 @@ public interface awn1027Visitor<T> extends ParseTreeVisitor<T> {
 	T visitStmt6(@NotNull awn1027Parser.Stmt6Context ctx);
 
 	/**
-	 * Visit a parse tree produced by {@link awn1027Parser#multExpr}.
+	 * Visit a parse tree produced by {@link awn1027Parser#atom5}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitMultExpr(@NotNull awn1027Parser.MultExprContext ctx);
+	T visitAtom5(@NotNull awn1027Parser.Atom5Context ctx);
 
 	/**
 	 * Visit a parse tree produced by {@link awn1027Parser#stmt4}.
@@ -34,6 +34,13 @@ public interface awn1027Visitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitStmt4(@NotNull awn1027Parser.Stmt4Context ctx);
+
+	/**
+	 * Visit a parse tree produced by {@link awn1027Parser#atom6}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitAtom6(@NotNull awn1027Parser.Atom6Context ctx);
 
 	/**
 	 * Visit a parse tree produced by {@link awn1027Parser#stmt5}.
@@ -78,6 +85,13 @@ public interface awn1027Visitor<T> extends ParseTreeVisitor<T> {
 	T visitAtom1(@NotNull awn1027Parser.Atom1Context ctx);
 
 	/**
+	 * Visit a parse tree produced by {@link awn1027Parser#atom2}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitAtom2(@NotNull awn1027Parser.Atom2Context ctx);
+
+	/**
 	 * Visit a parse tree produced by {@link awn1027Parser#stmt1}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -90,13 +104,6 @@ public interface awn1027Visitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitSetdefine(@NotNull awn1027Parser.SetdefineContext ctx);
-
-	/**
-	 * Visit a parse tree produced by {@link awn1027Parser#atom2}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitAtom2(@NotNull awn1027Parser.Atom2Context ctx);
 
 	/**
 	 * Visit a parse tree produced by {@link awn1027Parser#paramList}.
@@ -132,6 +139,27 @@ public interface awn1027Visitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitTypeName1(@NotNull awn1027Parser.TypeName1Context ctx);
+
+	/**
+	 * Visit a parse tree produced by {@link awn1027Parser#additiveExpr1}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitAdditiveExpr1(@NotNull awn1027Parser.AdditiveExpr1Context ctx);
+
+	/**
+	 * Visit a parse tree produced by {@link awn1027Parser#additiveExpr2}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitAdditiveExpr2(@NotNull awn1027Parser.AdditiveExpr2Context ctx);
+
+	/**
+	 * Visit a parse tree produced by {@link awn1027Parser#additiveExpr3}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitAdditiveExpr3(@NotNull awn1027Parser.AdditiveExpr3Context ctx);
 
 	/**
 	 * Visit a parse tree produced by {@link awn1027Parser#typeName5}.
@@ -183,13 +211,6 @@ public interface awn1027Visitor<T> extends ParseTreeVisitor<T> {
 	T visitWsnEvent2(@NotNull awn1027Parser.WsnEvent2Context ctx);
 
 	/**
-	 * Visit a parse tree produced by {@link awn1027Parser#negationExpr}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitNegationExpr(@NotNull awn1027Parser.NegationExprContext ctx);
-
-	/**
 	 * Visit a parse tree produced by {@link awn1027Parser#wsnEvent1}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -197,11 +218,25 @@ public interface awn1027Visitor<T> extends ParseTreeVisitor<T> {
 	T visitWsnEvent1(@NotNull awn1027Parser.WsnEvent1Context ctx);
 
 	/**
+	 * Visit a parse tree produced by {@link awn1027Parser#negationExpr1}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitNegationExpr1(@NotNull awn1027Parser.NegationExpr1Context ctx);
+
+	/**
 	 * Visit a parse tree produced by {@link awn1027Parser#paramDecl}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	T visitParamDecl(@NotNull awn1027Parser.ParamDeclContext ctx);
+
+	/**
+	 * Visit a parse tree produced by {@link awn1027Parser#negationExpr2}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitNegationExpr2(@NotNull awn1027Parser.NegationExpr2Context ctx);
 
 	/**
 	 * Visit a parse tree produced by {@link awn1027Parser#orExpr}.
@@ -281,11 +316,25 @@ public interface awn1027Visitor<T> extends ParseTreeVisitor<T> {
 	T visitEqualityExpr2(@NotNull awn1027Parser.EqualityExpr2Context ctx);
 
 	/**
+	 * Visit a parse tree produced by {@link awn1027Parser#notExpr1}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitNotExpr1(@NotNull awn1027Parser.NotExpr1Context ctx);
+
+	/**
 	 * Visit a parse tree produced by {@link awn1027Parser#andExpr}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	T visitAndExpr(@NotNull awn1027Parser.AndExprContext ctx);
+
+	/**
+	 * Visit a parse tree produced by {@link awn1027Parser#notExpr2}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitNotExpr2(@NotNull awn1027Parser.NotExpr2Context ctx);
 
 	/**
 	 * Visit a parse tree produced by {@link awn1027Parser#expr1}.
@@ -344,13 +393,6 @@ public interface awn1027Visitor<T> extends ParseTreeVisitor<T> {
 	T visitFuncCall1(@NotNull awn1027Parser.FuncCall1Context ctx);
 
 	/**
-	 * Visit a parse tree produced by {@link awn1027Parser#notExpr}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitNotExpr(@NotNull awn1027Parser.NotExprContext ctx);
-
-	/**
 	 * Visit a parse tree produced by {@link awn1027Parser#eventExpr3}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -377,20 +419,6 @@ public interface awn1027Visitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitFuncBlock(@NotNull awn1027Parser.FuncBlockContext ctx);
-
-	/**
-	 * Visit a parse tree produced by {@link awn1027Parser#additiveExpr}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitAdditiveExpr(@NotNull awn1027Parser.AdditiveExprContext ctx);
-
-	/**
-	 * Visit a parse tree produced by {@link awn1027Parser#comparisonExpr}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitComparisonExpr(@NotNull awn1027Parser.ComparisonExprContext ctx);
 
 	/**
 	 * Visit a parse tree produced by {@link awn1027Parser#eventExpr1}.
@@ -428,9 +456,65 @@ public interface awn1027Visitor<T> extends ParseTreeVisitor<T> {
 	T visitProcessTitle1(@NotNull awn1027Parser.ProcessTitle1Context ctx);
 
 	/**
+	 * Visit a parse tree produced by {@link awn1027Parser#comparisonExpr1}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitComparisonExpr1(@NotNull awn1027Parser.ComparisonExpr1Context ctx);
+
+	/**
+	 * Visit a parse tree produced by {@link awn1027Parser#multExpr2}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitMultExpr2(@NotNull awn1027Parser.MultExpr2Context ctx);
+
+	/**
+	 * Visit a parse tree produced by {@link awn1027Parser#comparisonExpr5}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitComparisonExpr5(@NotNull awn1027Parser.ComparisonExpr5Context ctx);
+
+	/**
+	 * Visit a parse tree produced by {@link awn1027Parser#multExpr1}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitMultExpr1(@NotNull awn1027Parser.MultExpr1Context ctx);
+
+	/**
+	 * Visit a parse tree produced by {@link awn1027Parser#comparisonExpr4}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitComparisonExpr4(@NotNull awn1027Parser.ComparisonExpr4Context ctx);
+
+	/**
+	 * Visit a parse tree produced by {@link awn1027Parser#comparisonExpr3}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitComparisonExpr3(@NotNull awn1027Parser.ComparisonExpr3Context ctx);
+
+	/**
+	 * Visit a parse tree produced by {@link awn1027Parser#multExpr3}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitMultExpr3(@NotNull awn1027Parser.MultExpr3Context ctx);
+
+	/**
 	 * Visit a parse tree produced by {@link awn1027Parser#processDef}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	T visitProcessDef(@NotNull awn1027Parser.ProcessDefContext ctx);
+
+	/**
+	 * Visit a parse tree produced by {@link awn1027Parser#comparisonExpr2}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitComparisonExpr2(@NotNull awn1027Parser.ComparisonExpr2Context ctx);
 }

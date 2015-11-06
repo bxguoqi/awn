@@ -1,0 +1,29 @@
+/**
+ * 
+ */
+package base;
+
+import java.util.List;
+import java.util.Set;
+
+/**
+ * @author Administrator
+ *
+ */
+public class Tnode {
+	public Tnode(){
+	}
+	public String getContent() {
+		return content;
+	}
+	public void setContent(String content) {
+		this.content = content;
+	}
+	//表达式的中文标示
+	String content;
+	//后继节点
+	List<Link> succNodes;
+	//前驱节点
+	List<Link> preNodes; 
+	Set<Var> def,ref;//
+}

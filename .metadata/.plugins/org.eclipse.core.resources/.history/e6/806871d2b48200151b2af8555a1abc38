@@ -1,0 +1,471 @@
+package antlr;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Vector;
+
+import org.antlr.v4.runtime.tree.ErrorNode;
+import org.antlr.v4.runtime.tree.ParseTree;
+import org.antlr.v4.runtime.tree.RuleNode;
+import org.antlr.v4.runtime.tree.TerminalNode;
+
+import antlr.awn1027Parser.AdditiveExprContext;
+import antlr.awn1027Parser.AndExprContext;
+import antlr.awn1027Parser.Atom1Context;
+import antlr.awn1027Parser.Atom2Context;
+import antlr.awn1027Parser.Atom3Context;
+import antlr.awn1027Parser.Atom4Context;
+import antlr.awn1027Parser.BlockContext;
+import antlr.awn1027Parser.ColumnContext;
+import antlr.awn1027Parser.ComparisonExprContext;
+import antlr.awn1027Parser.EqualityExpr1Context;
+import antlr.awn1027Parser.EqualityExpr2Context;
+import antlr.awn1027Parser.EqualityExpr3Context;
+import antlr.awn1027Parser.EventExpr1Context;
+import antlr.awn1027Parser.EventExpr2Context;
+import antlr.awn1027Parser.EventExpr3Context;
+import antlr.awn1027Parser.EventExpr4Context;
+import antlr.awn1027Parser.EventExpr5Context;
+import antlr.awn1027Parser.Expr1Context;
+import antlr.awn1027Parser.Expr2Context;
+import antlr.awn1027Parser.FuncBlockContext;
+import antlr.awn1027Parser.FuncCall1Context;
+import antlr.awn1027Parser.FuncCall2Context;
+import antlr.awn1027Parser.FuncdefineContext;
+import antlr.awn1027Parser.IfStmtContext;
+import antlr.awn1027Parser.MultExprContext;
+import antlr.awn1027Parser.NegationExprContext;
+import antlr.awn1027Parser.NotExprContext;
+import antlr.awn1027Parser.OrExprContext;
+import antlr.awn1027Parser.ParamDeclContext;
+import antlr.awn1027Parser.ParamDeclListContext;
+import antlr.awn1027Parser.ParamListContext;
+import antlr.awn1027Parser.ProcessDefContext;
+import antlr.awn1027Parser.ProcessTitle1Context;
+import antlr.awn1027Parser.ProcessTitle2Context;
+import antlr.awn1027Parser.ProgramContext;
+import antlr.awn1027Parser.SetNameContext;
+import antlr.awn1027Parser.SetdefineContext;
+import antlr.awn1027Parser.StartContext;
+import antlr.awn1027Parser.Stmt1Context;
+import antlr.awn1027Parser.Stmt2Context;
+import antlr.awn1027Parser.Stmt3Context;
+import antlr.awn1027Parser.Stmt4Context;
+import antlr.awn1027Parser.Stmt5Context;
+import antlr.awn1027Parser.Stmt6Context;
+import antlr.awn1027Parser.StmtListContext;
+import antlr.awn1027Parser.Type1Context;
+import antlr.awn1027Parser.Type2Context;
+import antlr.awn1027Parser.TypeName1Context;
+import antlr.awn1027Parser.TypeName2Context;
+import antlr.awn1027Parser.TypeName3Context;
+import antlr.awn1027Parser.TypeName4Context;
+import antlr.awn1027Parser.TypeName5Context;
+import antlr.awn1027Parser.TypeName6Context;
+import antlr.awn1027Parser.Var1Context;
+import antlr.awn1027Parser.Var2Context;
+import antlr.awn1027Parser.WsnEvent1Context;
+import antlr.awn1027Parser.WsnEvent2Context;
+import antlr.awn1027Parser.WsnEvent3Context;
+import antlr.awn1027Parser.WsnFuncCall1Context;
+import antlr.awn1027Parser.WsnFuncCall2Context;
+import base.Tnode;
+
+public class MyVisitor implements awn1027Visitor<Tnode> {
+	Map<String,Tnode> FunCall = new HashMap<String,Tnode>();
+	Vector<Tnode> attackpoint = new Vector<Tnode>();
+	
+	@Override
+	public Tnode visit(ParseTree arg0) {
+		// TODO Auto-generated method stub
+		System.out.println("visit(ParseTree arg0): ");
+//		visit
+		return null;
+	}
+
+	@Override
+	public Tnode visitChildren(RuleNode arg0) {
+		// TODO Auto-generated method stub
+		System.out.println("visitChildren(RuleNode arg0)");
+		return null;
+	}
+
+	@Override
+	public Tnode visitErrorNode(ErrorNode arg0) {
+		// TODO Auto-generated method stub
+		System.out.println("visitErrorNode(ErrorNode arg0)");
+		return null;
+	}
+
+	@Override
+	public Tnode visitTerminal(TerminalNode arg0) {
+		// TODO Auto-generated method stub
+		System.out.println("visitTerminal(TerminalNode arg0)");
+		return null;
+	}
+
+	@Override
+	public Tnode visitStmt6(Stmt6Context ctx) {
+		// TODO Auto-generated method stub
+		Tnode node = visit(ctx.eventExpr());
+		
+//		memory.put(ctx.getText(), node);
+		return node;
+	}
+
+	@Override
+	public Tnode visitMultExpr(MultExprContext ctx) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Tnode visitStmt4(Stmt4Context ctx) {
+		// TODO Auto-generated method stub
+		
+		return null;
+	}
+
+	@Override
+	public Tnode visitStmt5(Stmt5Context ctx) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Tnode visitAtom3(Atom3Context ctx) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Tnode visitStmt2(Stmt2Context ctx) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Tnode visitAtom4(Atom4Context ctx) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Tnode visitStmt3(Stmt3Context ctx) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Tnode visitAtom1(Atom1Context ctx) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Tnode visitStmt1(Stmt1Context ctx) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Tnode visitSetdefine(SetdefineContext ctx) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Tnode visitAtom2(Atom2Context ctx) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Tnode visitParamList(ParamListContext ctx) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Tnode visitTypeName4(TypeName4Context ctx) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Tnode visitTypeName3(TypeName3Context ctx) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Tnode visitTypeName2(TypeName2Context ctx) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Tnode visitTypeName1(TypeName1Context ctx) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Tnode visitTypeName5(TypeName5Context ctx) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Tnode visitType1(Type1Context ctx) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Tnode visitTypeName6(TypeName6Context ctx) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Tnode visitType2(Type2Context ctx) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Tnode visitIfStmt(IfStmtContext ctx) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Tnode visitWsnEvent3(WsnEvent3Context ctx) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Tnode visitWsnEvent2(WsnEvent2Context ctx) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Tnode visitNegationExpr(NegationExprContext ctx) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Tnode visitWsnEvent1(WsnEvent1Context ctx) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Tnode visitParamDecl(ParamDeclContext ctx) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Tnode visitOrExpr(OrExprContext ctx) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Tnode visitStmtList(StmtListContext ctx) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Tnode visitStart(StartContext ctx) {
+		System.out.println("visitStart(StartContext ctx)");
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Tnode visitProgram(ProgramContext ctx) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Tnode visitColumn(ColumnContext ctx) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Tnode visitEqualityExpr3(EqualityExpr3Context ctx) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Tnode visitSetName(SetNameContext ctx) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Tnode visitWsnFuncCall2(WsnFuncCall2Context ctx) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Tnode visitWsnFuncCall1(WsnFuncCall1Context ctx) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Tnode visitEqualityExpr1(EqualityExpr1Context ctx) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Tnode visitEqualityExpr2(EqualityExpr2Context ctx) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Tnode visitAndExpr(AndExprContext ctx) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Tnode visitExpr1(Expr1Context ctx) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Tnode visitExpr2(Expr2Context ctx) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Tnode visitBlock(BlockContext ctx) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Tnode visitVar1(Var1Context ctx) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Tnode visitFuncCall2(FuncCall2Context ctx) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Tnode visitVar2(Var2Context ctx) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Tnode visitParamDeclList(ParamDeclListContext ctx) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Tnode visitFuncCall1(FuncCall1Context ctx) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Tnode visitNotExpr(NotExprContext ctx) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Tnode visitEventExpr3(EventExpr3Context ctx) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Tnode visitEventExpr4(EventExpr4Context ctx) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Tnode visitEventExpr5(EventExpr5Context ctx) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Tnode visitFuncBlock(FuncBlockContext ctx) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Tnode visitAdditiveExpr(AdditiveExprContext ctx) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Tnode visitComparisonExpr(ComparisonExprContext ctx) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Tnode visitEventExpr1(EventExpr1Context ctx) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Tnode visitEventExpr2(EventExpr2Context ctx) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Tnode visitFuncdefine(FuncdefineContext ctx) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Tnode visitProcessTitle2(ProcessTitle2Context ctx) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Tnode visitProcessTitle1(ProcessTitle1Context ctx) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Tnode visitProcessDef(ProcessDefContext ctx) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}

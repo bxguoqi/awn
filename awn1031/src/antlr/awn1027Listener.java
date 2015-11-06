@@ -23,15 +23,15 @@ public interface awn1027Listener extends ParseTreeListener {
 	void exitStmt6(@NotNull awn1027Parser.Stmt6Context ctx);
 
 	/**
-	 * Enter a parse tree produced by {@link awn1027Parser#multExpr}.
+	 * Enter a parse tree produced by {@link awn1027Parser#atom5}.
 	 * @param ctx the parse tree
 	 */
-	void enterMultExpr(@NotNull awn1027Parser.MultExprContext ctx);
+	void enterAtom5(@NotNull awn1027Parser.Atom5Context ctx);
 	/**
-	 * Exit a parse tree produced by {@link awn1027Parser#multExpr}.
+	 * Exit a parse tree produced by {@link awn1027Parser#atom5}.
 	 * @param ctx the parse tree
 	 */
-	void exitMultExpr(@NotNull awn1027Parser.MultExprContext ctx);
+	void exitAtom5(@NotNull awn1027Parser.Atom5Context ctx);
 
 	/**
 	 * Enter a parse tree produced by {@link awn1027Parser#stmt4}.
@@ -43,6 +43,17 @@ public interface awn1027Listener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitStmt4(@NotNull awn1027Parser.Stmt4Context ctx);
+
+	/**
+	 * Enter a parse tree produced by {@link awn1027Parser#atom6}.
+	 * @param ctx the parse tree
+	 */
+	void enterAtom6(@NotNull awn1027Parser.Atom6Context ctx);
+	/**
+	 * Exit a parse tree produced by {@link awn1027Parser#atom6}.
+	 * @param ctx the parse tree
+	 */
+	void exitAtom6(@NotNull awn1027Parser.Atom6Context ctx);
 
 	/**
 	 * Enter a parse tree produced by {@link awn1027Parser#stmt5}.
@@ -111,6 +122,17 @@ public interface awn1027Listener extends ParseTreeListener {
 	void exitAtom1(@NotNull awn1027Parser.Atom1Context ctx);
 
 	/**
+	 * Enter a parse tree produced by {@link awn1027Parser#atom2}.
+	 * @param ctx the parse tree
+	 */
+	void enterAtom2(@NotNull awn1027Parser.Atom2Context ctx);
+	/**
+	 * Exit a parse tree produced by {@link awn1027Parser#atom2}.
+	 * @param ctx the parse tree
+	 */
+	void exitAtom2(@NotNull awn1027Parser.Atom2Context ctx);
+
+	/**
 	 * Enter a parse tree produced by {@link awn1027Parser#stmt1}.
 	 * @param ctx the parse tree
 	 */
@@ -131,17 +153,6 @@ public interface awn1027Listener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitSetdefine(@NotNull awn1027Parser.SetdefineContext ctx);
-
-	/**
-	 * Enter a parse tree produced by {@link awn1027Parser#atom2}.
-	 * @param ctx the parse tree
-	 */
-	void enterAtom2(@NotNull awn1027Parser.Atom2Context ctx);
-	/**
-	 * Exit a parse tree produced by {@link awn1027Parser#atom2}.
-	 * @param ctx the parse tree
-	 */
-	void exitAtom2(@NotNull awn1027Parser.Atom2Context ctx);
 
 	/**
 	 * Enter a parse tree produced by {@link awn1027Parser#paramList}.
@@ -197,6 +208,39 @@ public interface awn1027Listener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitTypeName1(@NotNull awn1027Parser.TypeName1Context ctx);
+
+	/**
+	 * Enter a parse tree produced by {@link awn1027Parser#additiveExpr1}.
+	 * @param ctx the parse tree
+	 */
+	void enterAdditiveExpr1(@NotNull awn1027Parser.AdditiveExpr1Context ctx);
+	/**
+	 * Exit a parse tree produced by {@link awn1027Parser#additiveExpr1}.
+	 * @param ctx the parse tree
+	 */
+	void exitAdditiveExpr1(@NotNull awn1027Parser.AdditiveExpr1Context ctx);
+
+	/**
+	 * Enter a parse tree produced by {@link awn1027Parser#additiveExpr2}.
+	 * @param ctx the parse tree
+	 */
+	void enterAdditiveExpr2(@NotNull awn1027Parser.AdditiveExpr2Context ctx);
+	/**
+	 * Exit a parse tree produced by {@link awn1027Parser#additiveExpr2}.
+	 * @param ctx the parse tree
+	 */
+	void exitAdditiveExpr2(@NotNull awn1027Parser.AdditiveExpr2Context ctx);
+
+	/**
+	 * Enter a parse tree produced by {@link awn1027Parser#additiveExpr3}.
+	 * @param ctx the parse tree
+	 */
+	void enterAdditiveExpr3(@NotNull awn1027Parser.AdditiveExpr3Context ctx);
+	/**
+	 * Exit a parse tree produced by {@link awn1027Parser#additiveExpr3}.
+	 * @param ctx the parse tree
+	 */
+	void exitAdditiveExpr3(@NotNull awn1027Parser.AdditiveExpr3Context ctx);
 
 	/**
 	 * Enter a parse tree produced by {@link awn1027Parser#typeName5}.
@@ -276,17 +320,6 @@ public interface awn1027Listener extends ParseTreeListener {
 	void exitWsnEvent2(@NotNull awn1027Parser.WsnEvent2Context ctx);
 
 	/**
-	 * Enter a parse tree produced by {@link awn1027Parser#negationExpr}.
-	 * @param ctx the parse tree
-	 */
-	void enterNegationExpr(@NotNull awn1027Parser.NegationExprContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link awn1027Parser#negationExpr}.
-	 * @param ctx the parse tree
-	 */
-	void exitNegationExpr(@NotNull awn1027Parser.NegationExprContext ctx);
-
-	/**
 	 * Enter a parse tree produced by {@link awn1027Parser#wsnEvent1}.
 	 * @param ctx the parse tree
 	 */
@@ -298,6 +331,17 @@ public interface awn1027Listener extends ParseTreeListener {
 	void exitWsnEvent1(@NotNull awn1027Parser.WsnEvent1Context ctx);
 
 	/**
+	 * Enter a parse tree produced by {@link awn1027Parser#negationExpr1}.
+	 * @param ctx the parse tree
+	 */
+	void enterNegationExpr1(@NotNull awn1027Parser.NegationExpr1Context ctx);
+	/**
+	 * Exit a parse tree produced by {@link awn1027Parser#negationExpr1}.
+	 * @param ctx the parse tree
+	 */
+	void exitNegationExpr1(@NotNull awn1027Parser.NegationExpr1Context ctx);
+
+	/**
 	 * Enter a parse tree produced by {@link awn1027Parser#paramDecl}.
 	 * @param ctx the parse tree
 	 */
@@ -307,6 +351,17 @@ public interface awn1027Listener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitParamDecl(@NotNull awn1027Parser.ParamDeclContext ctx);
+
+	/**
+	 * Enter a parse tree produced by {@link awn1027Parser#negationExpr2}.
+	 * @param ctx the parse tree
+	 */
+	void enterNegationExpr2(@NotNull awn1027Parser.NegationExpr2Context ctx);
+	/**
+	 * Exit a parse tree produced by {@link awn1027Parser#negationExpr2}.
+	 * @param ctx the parse tree
+	 */
+	void exitNegationExpr2(@NotNull awn1027Parser.NegationExpr2Context ctx);
 
 	/**
 	 * Enter a parse tree produced by {@link awn1027Parser#orExpr}.
@@ -430,6 +485,17 @@ public interface awn1027Listener extends ParseTreeListener {
 	void exitEqualityExpr2(@NotNull awn1027Parser.EqualityExpr2Context ctx);
 
 	/**
+	 * Enter a parse tree produced by {@link awn1027Parser#notExpr1}.
+	 * @param ctx the parse tree
+	 */
+	void enterNotExpr1(@NotNull awn1027Parser.NotExpr1Context ctx);
+	/**
+	 * Exit a parse tree produced by {@link awn1027Parser#notExpr1}.
+	 * @param ctx the parse tree
+	 */
+	void exitNotExpr1(@NotNull awn1027Parser.NotExpr1Context ctx);
+
+	/**
 	 * Enter a parse tree produced by {@link awn1027Parser#andExpr}.
 	 * @param ctx the parse tree
 	 */
@@ -439,6 +505,17 @@ public interface awn1027Listener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitAndExpr(@NotNull awn1027Parser.AndExprContext ctx);
+
+	/**
+	 * Enter a parse tree produced by {@link awn1027Parser#notExpr2}.
+	 * @param ctx the parse tree
+	 */
+	void enterNotExpr2(@NotNull awn1027Parser.NotExpr2Context ctx);
+	/**
+	 * Exit a parse tree produced by {@link awn1027Parser#notExpr2}.
+	 * @param ctx the parse tree
+	 */
+	void exitNotExpr2(@NotNull awn1027Parser.NotExpr2Context ctx);
 
 	/**
 	 * Enter a parse tree produced by {@link awn1027Parser#expr1}.
@@ -529,17 +606,6 @@ public interface awn1027Listener extends ParseTreeListener {
 	void exitFuncCall1(@NotNull awn1027Parser.FuncCall1Context ctx);
 
 	/**
-	 * Enter a parse tree produced by {@link awn1027Parser#notExpr}.
-	 * @param ctx the parse tree
-	 */
-	void enterNotExpr(@NotNull awn1027Parser.NotExprContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link awn1027Parser#notExpr}.
-	 * @param ctx the parse tree
-	 */
-	void exitNotExpr(@NotNull awn1027Parser.NotExprContext ctx);
-
-	/**
 	 * Enter a parse tree produced by {@link awn1027Parser#eventExpr3}.
 	 * @param ctx the parse tree
 	 */
@@ -582,28 +648,6 @@ public interface awn1027Listener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitFuncBlock(@NotNull awn1027Parser.FuncBlockContext ctx);
-
-	/**
-	 * Enter a parse tree produced by {@link awn1027Parser#additiveExpr}.
-	 * @param ctx the parse tree
-	 */
-	void enterAdditiveExpr(@NotNull awn1027Parser.AdditiveExprContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link awn1027Parser#additiveExpr}.
-	 * @param ctx the parse tree
-	 */
-	void exitAdditiveExpr(@NotNull awn1027Parser.AdditiveExprContext ctx);
-
-	/**
-	 * Enter a parse tree produced by {@link awn1027Parser#comparisonExpr}.
-	 * @param ctx the parse tree
-	 */
-	void enterComparisonExpr(@NotNull awn1027Parser.ComparisonExprContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link awn1027Parser#comparisonExpr}.
-	 * @param ctx the parse tree
-	 */
-	void exitComparisonExpr(@NotNull awn1027Parser.ComparisonExprContext ctx);
 
 	/**
 	 * Enter a parse tree produced by {@link awn1027Parser#eventExpr1}.
@@ -661,6 +705,83 @@ public interface awn1027Listener extends ParseTreeListener {
 	void exitProcessTitle1(@NotNull awn1027Parser.ProcessTitle1Context ctx);
 
 	/**
+	 * Enter a parse tree produced by {@link awn1027Parser#comparisonExpr1}.
+	 * @param ctx the parse tree
+	 */
+	void enterComparisonExpr1(@NotNull awn1027Parser.ComparisonExpr1Context ctx);
+	/**
+	 * Exit a parse tree produced by {@link awn1027Parser#comparisonExpr1}.
+	 * @param ctx the parse tree
+	 */
+	void exitComparisonExpr1(@NotNull awn1027Parser.ComparisonExpr1Context ctx);
+
+	/**
+	 * Enter a parse tree produced by {@link awn1027Parser#multExpr2}.
+	 * @param ctx the parse tree
+	 */
+	void enterMultExpr2(@NotNull awn1027Parser.MultExpr2Context ctx);
+	/**
+	 * Exit a parse tree produced by {@link awn1027Parser#multExpr2}.
+	 * @param ctx the parse tree
+	 */
+	void exitMultExpr2(@NotNull awn1027Parser.MultExpr2Context ctx);
+
+	/**
+	 * Enter a parse tree produced by {@link awn1027Parser#comparisonExpr5}.
+	 * @param ctx the parse tree
+	 */
+	void enterComparisonExpr5(@NotNull awn1027Parser.ComparisonExpr5Context ctx);
+	/**
+	 * Exit a parse tree produced by {@link awn1027Parser#comparisonExpr5}.
+	 * @param ctx the parse tree
+	 */
+	void exitComparisonExpr5(@NotNull awn1027Parser.ComparisonExpr5Context ctx);
+
+	/**
+	 * Enter a parse tree produced by {@link awn1027Parser#multExpr1}.
+	 * @param ctx the parse tree
+	 */
+	void enterMultExpr1(@NotNull awn1027Parser.MultExpr1Context ctx);
+	/**
+	 * Exit a parse tree produced by {@link awn1027Parser#multExpr1}.
+	 * @param ctx the parse tree
+	 */
+	void exitMultExpr1(@NotNull awn1027Parser.MultExpr1Context ctx);
+
+	/**
+	 * Enter a parse tree produced by {@link awn1027Parser#comparisonExpr4}.
+	 * @param ctx the parse tree
+	 */
+	void enterComparisonExpr4(@NotNull awn1027Parser.ComparisonExpr4Context ctx);
+	/**
+	 * Exit a parse tree produced by {@link awn1027Parser#comparisonExpr4}.
+	 * @param ctx the parse tree
+	 */
+	void exitComparisonExpr4(@NotNull awn1027Parser.ComparisonExpr4Context ctx);
+
+	/**
+	 * Enter a parse tree produced by {@link awn1027Parser#comparisonExpr3}.
+	 * @param ctx the parse tree
+	 */
+	void enterComparisonExpr3(@NotNull awn1027Parser.ComparisonExpr3Context ctx);
+	/**
+	 * Exit a parse tree produced by {@link awn1027Parser#comparisonExpr3}.
+	 * @param ctx the parse tree
+	 */
+	void exitComparisonExpr3(@NotNull awn1027Parser.ComparisonExpr3Context ctx);
+
+	/**
+	 * Enter a parse tree produced by {@link awn1027Parser#multExpr3}.
+	 * @param ctx the parse tree
+	 */
+	void enterMultExpr3(@NotNull awn1027Parser.MultExpr3Context ctx);
+	/**
+	 * Exit a parse tree produced by {@link awn1027Parser#multExpr3}.
+	 * @param ctx the parse tree
+	 */
+	void exitMultExpr3(@NotNull awn1027Parser.MultExpr3Context ctx);
+
+	/**
 	 * Enter a parse tree produced by {@link awn1027Parser#processDef}.
 	 * @param ctx the parse tree
 	 */
@@ -670,4 +791,15 @@ public interface awn1027Listener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitProcessDef(@NotNull awn1027Parser.ProcessDefContext ctx);
+
+	/**
+	 * Enter a parse tree produced by {@link awn1027Parser#comparisonExpr2}.
+	 * @param ctx the parse tree
+	 */
+	void enterComparisonExpr2(@NotNull awn1027Parser.ComparisonExpr2Context ctx);
+	/**
+	 * Exit a parse tree produced by {@link awn1027Parser#comparisonExpr2}.
+	 * @param ctx the parse tree
+	 */
+	void exitComparisonExpr2(@NotNull awn1027Parser.ComparisonExpr2Context ctx);
 }

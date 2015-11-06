@@ -33,13 +33,13 @@ public class awn1027BaseListener implements awn1027Listener {
 	 * <p/>
 	 * The default implementation does nothing.
 	 */
-	@Override public void enterMultExpr(@NotNull awn1027Parser.MultExprContext ctx) { }
+	@Override public void enterAtom5(@NotNull awn1027Parser.Atom5Context ctx) { }
 	/**
 	 * {@inheritDoc}
 	 * <p/>
 	 * The default implementation does nothing.
 	 */
-	@Override public void exitMultExpr(@NotNull awn1027Parser.MultExprContext ctx) { }
+	@Override public void exitAtom5(@NotNull awn1027Parser.Atom5Context ctx) { }
 
 	/**
 	 * {@inheritDoc}
@@ -53,6 +53,19 @@ public class awn1027BaseListener implements awn1027Listener {
 	 * The default implementation does nothing.
 	 */
 	@Override public void exitStmt4(@NotNull awn1027Parser.Stmt4Context ctx) { }
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void enterAtom6(@NotNull awn1027Parser.Atom6Context ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void exitAtom6(@NotNull awn1027Parser.Atom6Context ctx) { }
 
 	/**
 	 * {@inheritDoc}
@@ -137,6 +150,19 @@ public class awn1027BaseListener implements awn1027Listener {
 	 * <p/>
 	 * The default implementation does nothing.
 	 */
+	@Override public void enterAtom2(@NotNull awn1027Parser.Atom2Context ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void exitAtom2(@NotNull awn1027Parser.Atom2Context ctx) { }
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
 	@Override public void enterStmt1(@NotNull awn1027Parser.Stmt1Context ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -157,19 +183,6 @@ public class awn1027BaseListener implements awn1027Listener {
 	 * The default implementation does nothing.
 	 */
 	@Override public void exitSetdefine(@NotNull awn1027Parser.SetdefineContext ctx) { }
-
-	/**
-	 * {@inheritDoc}
-	 * <p/>
-	 * The default implementation does nothing.
-	 */
-	@Override public void enterAtom2(@NotNull awn1027Parser.Atom2Context ctx) { }
-	/**
-	 * {@inheritDoc}
-	 * <p/>
-	 * The default implementation does nothing.
-	 */
-	@Override public void exitAtom2(@NotNull awn1027Parser.Atom2Context ctx) { }
 
 	/**
 	 * {@inheritDoc}
@@ -235,6 +248,45 @@ public class awn1027BaseListener implements awn1027Listener {
 	 * The default implementation does nothing.
 	 */
 	@Override public void exitTypeName1(@NotNull awn1027Parser.TypeName1Context ctx) { }
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void enterAdditiveExpr1(@NotNull awn1027Parser.AdditiveExpr1Context ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void exitAdditiveExpr1(@NotNull awn1027Parser.AdditiveExpr1Context ctx) { }
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void enterAdditiveExpr2(@NotNull awn1027Parser.AdditiveExpr2Context ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void exitAdditiveExpr2(@NotNull awn1027Parser.AdditiveExpr2Context ctx) { }
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void enterAdditiveExpr3(@NotNull awn1027Parser.AdditiveExpr3Context ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void exitAdditiveExpr3(@NotNull awn1027Parser.AdditiveExpr3Context ctx) { }
 
 	/**
 	 * {@inheritDoc}
@@ -332,19 +384,6 @@ public class awn1027BaseListener implements awn1027Listener {
 	 * <p/>
 	 * The default implementation does nothing.
 	 */
-	@Override public void enterNegationExpr(@NotNull awn1027Parser.NegationExprContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 * <p/>
-	 * The default implementation does nothing.
-	 */
-	@Override public void exitNegationExpr(@NotNull awn1027Parser.NegationExprContext ctx) { }
-
-	/**
-	 * {@inheritDoc}
-	 * <p/>
-	 * The default implementation does nothing.
-	 */
 	@Override public void enterWsnEvent1(@NotNull awn1027Parser.WsnEvent1Context ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -358,6 +397,19 @@ public class awn1027BaseListener implements awn1027Listener {
 	 * <p/>
 	 * The default implementation does nothing.
 	 */
+	@Override public void enterNegationExpr1(@NotNull awn1027Parser.NegationExpr1Context ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void exitNegationExpr1(@NotNull awn1027Parser.NegationExpr1Context ctx) { }
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
 	@Override public void enterParamDecl(@NotNull awn1027Parser.ParamDeclContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -365,6 +417,19 @@ public class awn1027BaseListener implements awn1027Listener {
 	 * The default implementation does nothing.
 	 */
 	@Override public void exitParamDecl(@NotNull awn1027Parser.ParamDeclContext ctx) { }
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void enterNegationExpr2(@NotNull awn1027Parser.NegationExpr2Context ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void exitNegationExpr2(@NotNull awn1027Parser.NegationExpr2Context ctx) { }
 
 	/**
 	 * {@inheritDoc}
@@ -514,6 +579,19 @@ public class awn1027BaseListener implements awn1027Listener {
 	 * <p/>
 	 * The default implementation does nothing.
 	 */
+	@Override public void enterNotExpr1(@NotNull awn1027Parser.NotExpr1Context ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void exitNotExpr1(@NotNull awn1027Parser.NotExpr1Context ctx) { }
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
 	@Override public void enterAndExpr(@NotNull awn1027Parser.AndExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -521,6 +599,19 @@ public class awn1027BaseListener implements awn1027Listener {
 	 * The default implementation does nothing.
 	 */
 	@Override public void exitAndExpr(@NotNull awn1027Parser.AndExprContext ctx) { }
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void enterNotExpr2(@NotNull awn1027Parser.NotExpr2Context ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void exitNotExpr2(@NotNull awn1027Parser.NotExpr2Context ctx) { }
 
 	/**
 	 * {@inheritDoc}
@@ -631,19 +722,6 @@ public class awn1027BaseListener implements awn1027Listener {
 	 * <p/>
 	 * The default implementation does nothing.
 	 */
-	@Override public void enterNotExpr(@NotNull awn1027Parser.NotExprContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 * <p/>
-	 * The default implementation does nothing.
-	 */
-	@Override public void exitNotExpr(@NotNull awn1027Parser.NotExprContext ctx) { }
-
-	/**
-	 * {@inheritDoc}
-	 * <p/>
-	 * The default implementation does nothing.
-	 */
 	@Override public void enterEventExpr3(@NotNull awn1027Parser.EventExpr3Context ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -690,32 +768,6 @@ public class awn1027BaseListener implements awn1027Listener {
 	 * The default implementation does nothing.
 	 */
 	@Override public void exitFuncBlock(@NotNull awn1027Parser.FuncBlockContext ctx) { }
-
-	/**
-	 * {@inheritDoc}
-	 * <p/>
-	 * The default implementation does nothing.
-	 */
-	@Override public void enterAdditiveExpr(@NotNull awn1027Parser.AdditiveExprContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 * <p/>
-	 * The default implementation does nothing.
-	 */
-	@Override public void exitAdditiveExpr(@NotNull awn1027Parser.AdditiveExprContext ctx) { }
-
-	/**
-	 * {@inheritDoc}
-	 * <p/>
-	 * The default implementation does nothing.
-	 */
-	@Override public void enterComparisonExpr(@NotNull awn1027Parser.ComparisonExprContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 * <p/>
-	 * The default implementation does nothing.
-	 */
-	@Override public void exitComparisonExpr(@NotNull awn1027Parser.ComparisonExprContext ctx) { }
 
 	/**
 	 * {@inheritDoc}
@@ -787,6 +839,97 @@ public class awn1027BaseListener implements awn1027Listener {
 	 * <p/>
 	 * The default implementation does nothing.
 	 */
+	@Override public void enterComparisonExpr1(@NotNull awn1027Parser.ComparisonExpr1Context ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void exitComparisonExpr1(@NotNull awn1027Parser.ComparisonExpr1Context ctx) { }
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void enterMultExpr2(@NotNull awn1027Parser.MultExpr2Context ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void exitMultExpr2(@NotNull awn1027Parser.MultExpr2Context ctx) { }
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void enterComparisonExpr5(@NotNull awn1027Parser.ComparisonExpr5Context ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void exitComparisonExpr5(@NotNull awn1027Parser.ComparisonExpr5Context ctx) { }
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void enterMultExpr1(@NotNull awn1027Parser.MultExpr1Context ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void exitMultExpr1(@NotNull awn1027Parser.MultExpr1Context ctx) { }
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void enterComparisonExpr4(@NotNull awn1027Parser.ComparisonExpr4Context ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void exitComparisonExpr4(@NotNull awn1027Parser.ComparisonExpr4Context ctx) { }
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void enterComparisonExpr3(@NotNull awn1027Parser.ComparisonExpr3Context ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void exitComparisonExpr3(@NotNull awn1027Parser.ComparisonExpr3Context ctx) { }
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void enterMultExpr3(@NotNull awn1027Parser.MultExpr3Context ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void exitMultExpr3(@NotNull awn1027Parser.MultExpr3Context ctx) { }
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
 	@Override public void enterProcessDef(@NotNull awn1027Parser.ProcessDefContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -794,6 +937,19 @@ public class awn1027BaseListener implements awn1027Listener {
 	 * The default implementation does nothing.
 	 */
 	@Override public void exitProcessDef(@NotNull awn1027Parser.ProcessDefContext ctx) { }
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void enterComparisonExpr2(@NotNull awn1027Parser.ComparisonExpr2Context ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void exitComparisonExpr2(@NotNull awn1027Parser.ComparisonExpr2Context ctx) { }
 
 	/**
 	 * {@inheritDoc}

@@ -1,0 +1,29 @@
+/**
+ * 
+ */
+package base;
+
+import java.util.HashSet;
+import java.util.List;
+
+/**
+ * @author Administrator
+ *
+ */
+public class Tnode {
+	public
+	Tnode(){
+		setContent(new String());
+	}
+	public String getContent() {
+		return content;
+	}
+	public void setContent(String content) {
+		this.content = content;
+	}
+private
+	String content;
+	List<Link> succNodes;
+	List<Link> preNodes;
+	HashSet<Var> def,ref;
+}

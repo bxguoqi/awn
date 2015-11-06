@@ -3,17 +3,15 @@
  */
 package base;
 
-import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * @author Administrator
  *
  */
 public class Tnode {
-	public
-	Tnode(){
-		setContent(new String());
+	public Tnode(){
 	}
 	public String getContent() {
 		return content;
@@ -21,9 +19,15 @@ public class Tnode {
 	public void setContent(String content) {
 		this.content = content;
 	}
-private
+	public int val;
+	//表达式的中文标示
 	String content;
+	//后继节点
 	List<Link> succNodes;
+	//前驱节点
 	List<Link> preNodes;
-	HashSet<Var> def,ref;
+	//def: 这条语句定义的变量
+	Set<Var> def;
+	//ref: 这条语句引用的变量
+	Set<Var> ref;
 }

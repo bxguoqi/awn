@@ -1,0 +1,27 @@
+/**
+ * 
+ */
+package base;
+
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+/**
+ * @author Administrator
+ *
+ */
+public class Tnode {
+	public Tnode(){
+	}
+	public String getContent() {
+		return content;
+	}
+	public void setContent(String content) {
+		this.content = content;
+	}
+	String content;//表达式的中文标示
+	List<Link> succNodes;
+	List<Link> preNodes;
+	Set<Var> def,ref;
+}

@@ -1,470 +1,608 @@
 package antlr;
+import org.antlr.v4.runtime.misc.NotNull;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Vector;
+import base.*;
 
-import org.antlr.v4.runtime.tree.ErrorNode;
-import org.antlr.v4.runtime.tree.ParseTree;
-import org.antlr.v4.runtime.tree.RuleNode;
-import org.antlr.v4.runtime.tree.TerminalNode;
+public class MyVisitor extends awn1027BaseVisitor<Tnode>{
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitStmt6(@NotNull awn1027Parser.Stmt6Context ctx) { return visitChildren(ctx); }
 
-import antlr.awn1027Parser.AdditiveExprContext;
-import antlr.awn1027Parser.AndExprContext;
-import antlr.awn1027Parser.Atom1Context;
-import antlr.awn1027Parser.Atom2Context;
-import antlr.awn1027Parser.Atom3Context;
-import antlr.awn1027Parser.Atom4Context;
-import antlr.awn1027Parser.BlockContext;
-import antlr.awn1027Parser.ColumnContext;
-import antlr.awn1027Parser.ComparisonExprContext;
-import antlr.awn1027Parser.EqualityExpr1Context;
-import antlr.awn1027Parser.EqualityExpr2Context;
-import antlr.awn1027Parser.EqualityExpr3Context;
-import antlr.awn1027Parser.EventExpr1Context;
-import antlr.awn1027Parser.EventExpr2Context;
-import antlr.awn1027Parser.EventExpr3Context;
-import antlr.awn1027Parser.EventExpr4Context;
-import antlr.awn1027Parser.EventExpr5Context;
-import antlr.awn1027Parser.Expr1Context;
-import antlr.awn1027Parser.Expr2Context;
-import antlr.awn1027Parser.FuncBlockContext;
-import antlr.awn1027Parser.FuncCall1Context;
-import antlr.awn1027Parser.FuncCall2Context;
-import antlr.awn1027Parser.FuncdefineContext;
-import antlr.awn1027Parser.IfStmtContext;
-import antlr.awn1027Parser.MultExprContext;
-import antlr.awn1027Parser.NegationExprContext;
-import antlr.awn1027Parser.NotExprContext;
-import antlr.awn1027Parser.OrExprContext;
-import antlr.awn1027Parser.ParamDeclContext;
-import antlr.awn1027Parser.ParamDeclListContext;
-import antlr.awn1027Parser.ParamListContext;
-import antlr.awn1027Parser.ProcessDefContext;
-import antlr.awn1027Parser.ProcessTitle1Context;
-import antlr.awn1027Parser.ProcessTitle2Context;
-import antlr.awn1027Parser.ProgramContext;
-import antlr.awn1027Parser.SetNameContext;
-import antlr.awn1027Parser.SetdefineContext;
-import antlr.awn1027Parser.StartContext;
-import antlr.awn1027Parser.Stmt1Context;
-import antlr.awn1027Parser.Stmt2Context;
-import antlr.awn1027Parser.Stmt3Context;
-import antlr.awn1027Parser.Stmt4Context;
-import antlr.awn1027Parser.Stmt5Context;
-import antlr.awn1027Parser.Stmt6Context;
-import antlr.awn1027Parser.StmtListContext;
-import antlr.awn1027Parser.Type1Context;
-import antlr.awn1027Parser.Type2Context;
-import antlr.awn1027Parser.TypeName1Context;
-import antlr.awn1027Parser.TypeName2Context;
-import antlr.awn1027Parser.TypeName3Context;
-import antlr.awn1027Parser.TypeName4Context;
-import antlr.awn1027Parser.TypeName5Context;
-import antlr.awn1027Parser.TypeName6Context;
-import antlr.awn1027Parser.Var1Context;
-import antlr.awn1027Parser.Var2Context;
-import antlr.awn1027Parser.WsnEvent1Context;
-import antlr.awn1027Parser.WsnEvent2Context;
-import antlr.awn1027Parser.WsnEvent3Context;
-import antlr.awn1027Parser.WsnFuncCall1Context;
-import antlr.awn1027Parser.WsnFuncCall2Context;
-import base.Tnode;
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitAtom5(@NotNull awn1027Parser.Atom5Context ctx) { return visitChildren(ctx); }
 
-public class MyVisitor implements awn1027Visitor<Tnode> {
-	Map<String,Tnode> FunCall = new HashMap<String,Tnode>();
-	Vector<Tnode> attackpoint = new Vector<Tnode>();
-	
-	@Override
-	public Tnode visit(ParseTree arg0) {
-		// TODO Auto-generated method stub
-		System.out.println("visit(ParseTree arg0)");
-//		visit
-		return null;
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitStmt4(@NotNull awn1027Parser.Stmt4Context ctx) { return visitChildren(ctx); }
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitAtom6(@NotNull awn1027Parser.Atom6Context ctx) { return visitChildren(ctx); }
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitStmt5(@NotNull awn1027Parser.Stmt5Context ctx) { return visitChildren(ctx); }
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitAtom3(@NotNull awn1027Parser.Atom3Context ctx) { return visitChildren(ctx); }
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitStmt2(@NotNull awn1027Parser.Stmt2Context ctx) { return visitChildren(ctx); }
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitAtom4(@NotNull awn1027Parser.Atom4Context ctx) { return visitChildren(ctx); }
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitStmt3(@NotNull awn1027Parser.Stmt3Context ctx) { return visitChildren(ctx); }
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitAtom1(@NotNull awn1027Parser.Atom1Context ctx)  {
+		Tnode node= new Tnode();
+		node.val = Integer.parseInt(ctx.getText());
+		return node;
 	}
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitAtom2(@NotNull awn1027Parser.Atom2Context ctx) { return visitChildren(ctx); }
 
-	@Override
-	public Tnode visitChildren(RuleNode arg0) {
-		// TODO Auto-generated method stub
-		System.out.println("visitChildren(RuleNode arg0)");
-		return null;
-	}
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitStmt1(@NotNull awn1027Parser.Stmt1Context ctx) { return visitChildren(ctx); }
 
-	@Override
-	public Tnode visitErrorNode(ErrorNode arg0) {
-		// TODO Auto-generated method stub
-		System.out.println("visitErrorNode(ErrorNode arg0)");
-		return null;
-	}
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitSetdefine(@NotNull awn1027Parser.SetdefineContext ctx) { return visitChildren(ctx); }
 
-	@Override
-	public Tnode visitTerminal(TerminalNode arg0) {
-		// TODO Auto-generated method stub
-		System.out.println("visitTerminal(TerminalNode arg0)");
-		return null;
-	}
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitParamList(@NotNull awn1027Parser.ParamListContext ctx) { return visitChildren(ctx); }
 
-	@Override
-	public Tnode visitStmt6(Stmt6Context ctx) {
-		// TODO Auto-generated method stub
-		Tnode node = visit(ctx.eventExpr());
-		
-//		memory.put(ctx.getText(), node);
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitTypeName4(@NotNull awn1027Parser.TypeName4Context ctx) { return visitChildren(ctx); }
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitTypeName3(@NotNull awn1027Parser.TypeName3Context ctx) { return visitChildren(ctx); }
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitTypeName2(@NotNull awn1027Parser.TypeName2Context ctx) { return visitChildren(ctx); }
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitTypeName1(@NotNull awn1027Parser.TypeName1Context ctx) { return visitChildren(ctx); }
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitAdditiveExpr1(@NotNull awn1027Parser.AdditiveExpr1Context ctx) {
+		System.out.println(ctx.getText());
+		Tnode node= new Tnode();
+		node.val = visit(ctx.multExpr()).val;
 		return node;
 	}
 
-	@Override
-	public Tnode visitMultExpr(MultExprContext ctx) {
-		// TODO Auto-generated method stub
-		return null;
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitAdditiveExpr2(@NotNull awn1027Parser.AdditiveExpr2Context ctx){
+		System.out.println(ctx.getText());
+		Tnode node= new Tnode();
+		node.val = visit(ctx.additiveExpr()).val+visit(ctx.multExpr()).val;
+		return node;
 	}
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitAdditiveExpr3(@NotNull awn1027Parser.AdditiveExpr3Context ctx) { 
+		System.out.println(ctx.getText());
+		Tnode node= new Tnode();
+		node.val = visit(ctx.additiveExpr()).val-visit(ctx.multExpr()).val;
+		return node;
+	}
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitTypeName5(@NotNull awn1027Parser.TypeName5Context ctx) { return visitChildren(ctx); }
 
-	@Override
-	public Tnode visitStmt4(Stmt4Context ctx) {
-		// TODO Auto-generated method stub
-		
-		return null;
-	}
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitType1(@NotNull awn1027Parser.Type1Context ctx) { return visitChildren(ctx); }
 
-	@Override
-	public Tnode visitStmt5(Stmt5Context ctx) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitTypeName6(@NotNull awn1027Parser.TypeName6Context ctx) { return visitChildren(ctx); }
 
-	@Override
-	public Tnode visitAtom3(Atom3Context ctx) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitType2(@NotNull awn1027Parser.Type2Context ctx) { return visitChildren(ctx); }
 
-	@Override
-	public Tnode visitStmt2(Stmt2Context ctx) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitIfStmt(@NotNull awn1027Parser.IfStmtContext ctx) { return visitChildren(ctx); }
 
-	@Override
-	public Tnode visitAtom4(Atom4Context ctx) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitWsnEvent3(@NotNull awn1027Parser.WsnEvent3Context ctx) { return visitChildren(ctx); }
 
-	@Override
-	public Tnode visitStmt3(Stmt3Context ctx) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitWsnEvent2(@NotNull awn1027Parser.WsnEvent2Context ctx) { return visitChildren(ctx); }
 
-	@Override
-	public Tnode visitAtom1(Atom1Context ctx) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitWsnEvent1(@NotNull awn1027Parser.WsnEvent1Context ctx) { return visitChildren(ctx); }
 
-	@Override
-	public Tnode visitStmt1(Stmt1Context ctx) {
-		// TODO Auto-generated method stub
-		return null;
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitNegationExpr1(@NotNull awn1027Parser.NegationExpr1Context ctx) {
+		Tnode node= new Tnode();
+		node.val = visit(ctx.atom()).val;
+		return node;
 	}
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitParamDecl(@NotNull awn1027Parser.ParamDeclContext ctx) { return visitChildren(ctx); }
 
-	@Override
-	public Tnode visitSetdefine(SetdefineContext ctx) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitNegationExpr2(@NotNull awn1027Parser.NegationExpr2Context ctx) { return visitChildren(ctx); }
 
-	@Override
-	public Tnode visitAtom2(Atom2Context ctx) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitOrExpr(@NotNull awn1027Parser.OrExprContext ctx) { return visitChildren(ctx); }
 
-	@Override
-	public Tnode visitParamList(ParamListContext ctx) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitStmtList(@NotNull awn1027Parser.StmtListContext ctx) { return visitChildren(ctx); }
 
-	@Override
-	public Tnode visitTypeName4(TypeName4Context ctx) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitStart(@NotNull awn1027Parser.StartContext ctx) { return visitChildren(ctx); }
 
-	@Override
-	public Tnode visitTypeName3(TypeName3Context ctx) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitProgram(@NotNull awn1027Parser.ProgramContext ctx) { return visitChildren(ctx); }
 
-	@Override
-	public Tnode visitTypeName2(TypeName2Context ctx) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitColumn(@NotNull awn1027Parser.ColumnContext ctx) { return visitChildren(ctx); }
 
-	@Override
-	public Tnode visitTypeName1(TypeName1Context ctx) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitEqualityExpr3(@NotNull awn1027Parser.EqualityExpr3Context ctx) { return visitChildren(ctx); }
 
-	@Override
-	public Tnode visitTypeName5(TypeName5Context ctx) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitSetName(@NotNull awn1027Parser.SetNameContext ctx) { return visitChildren(ctx); }
 
-	@Override
-	public Tnode visitType1(Type1Context ctx) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitWsnFuncCall2(@NotNull awn1027Parser.WsnFuncCall2Context ctx) { return visitChildren(ctx); }
 
-	@Override
-	public Tnode visitTypeName6(TypeName6Context ctx) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitWsnFuncCall1(@NotNull awn1027Parser.WsnFuncCall1Context ctx) { return visitChildren(ctx); }
 
-	@Override
-	public Tnode visitType2(Type2Context ctx) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitEqualityExpr1(@NotNull awn1027Parser.EqualityExpr1Context ctx) { return visitChildren(ctx); }
 
-	@Override
-	public Tnode visitIfStmt(IfStmtContext ctx) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitEqualityExpr2(@NotNull awn1027Parser.EqualityExpr2Context ctx) { return visitChildren(ctx); }
 
-	@Override
-	public Tnode visitWsnEvent3(WsnEvent3Context ctx) {
-		// TODO Auto-generated method stub
-		return null;
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitNotExpr1(@NotNull awn1027Parser.NotExpr1Context ctx) {
+		Tnode node= new Tnode();
+		node.val = visit(ctx.negationExpr()).val;
+		return node;
 	}
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitAndExpr(@NotNull awn1027Parser.AndExprContext ctx) { return visitChildren(ctx); }
 
-	@Override
-	public Tnode visitWsnEvent2(WsnEvent2Context ctx) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitNotExpr2(@NotNull awn1027Parser.NotExpr2Context ctx) { return visitChildren(ctx); }
 
-	@Override
-	public Tnode visitNegationExpr(NegationExprContext ctx) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitExpr1(@NotNull awn1027Parser.Expr1Context ctx) { return visitChildren(ctx); }
 
-	@Override
-	public Tnode visitWsnEvent1(WsnEvent1Context ctx) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitExpr2(@NotNull awn1027Parser.Expr2Context ctx) { return visitChildren(ctx); }
 
-	@Override
-	public Tnode visitParamDecl(ParamDeclContext ctx) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitBlock(@NotNull awn1027Parser.BlockContext ctx) { return visitChildren(ctx); }
 
-	@Override
-	public Tnode visitOrExpr(OrExprContext ctx) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitVar1(@NotNull awn1027Parser.Var1Context ctx) { return visitChildren(ctx); }
 
-	@Override
-	public Tnode visitStmtList(StmtListContext ctx) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitFuncCall2(@NotNull awn1027Parser.FuncCall2Context ctx) { return visitChildren(ctx); }
 
-	@Override
-	public Tnode visitStart(StartContext ctx) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitVar2(@NotNull awn1027Parser.Var2Context ctx) { return visitChildren(ctx); }
 
-	@Override
-	public Tnode visitProgram(ProgramContext ctx) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitParamDeclList(@NotNull awn1027Parser.ParamDeclListContext ctx) { return visitChildren(ctx); }
 
-	@Override
-	public Tnode visitColumn(ColumnContext ctx) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitFuncCall1(@NotNull awn1027Parser.FuncCall1Context ctx) { return visitChildren(ctx); }
 
-	@Override
-	public Tnode visitEqualityExpr3(EqualityExpr3Context ctx) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitEventExpr3(@NotNull awn1027Parser.EventExpr3Context ctx) { return visitChildren(ctx); }
 
-	@Override
-	public Tnode visitSetName(SetNameContext ctx) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitEventExpr4(@NotNull awn1027Parser.EventExpr4Context ctx) { return visitChildren(ctx); }
 
-	@Override
-	public Tnode visitWsnFuncCall2(WsnFuncCall2Context ctx) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitEventExpr5(@NotNull awn1027Parser.EventExpr5Context ctx) { return visitChildren(ctx); }
 
-	@Override
-	public Tnode visitWsnFuncCall1(WsnFuncCall1Context ctx) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitFuncBlock(@NotNull awn1027Parser.FuncBlockContext ctx) { return visitChildren(ctx); }
 
-	@Override
-	public Tnode visitEqualityExpr1(EqualityExpr1Context ctx) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitEventExpr1(@NotNull awn1027Parser.EventExpr1Context ctx) { return visitChildren(ctx); }
 
-	@Override
-	public Tnode visitEqualityExpr2(EqualityExpr2Context ctx) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitEventExpr2(@NotNull awn1027Parser.EventExpr2Context ctx) { return visitChildren(ctx); }
 
-	@Override
-	public Tnode visitAndExpr(AndExprContext ctx) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitFuncdefine(@NotNull awn1027Parser.FuncdefineContext ctx) { return visitChildren(ctx); }
 
-	@Override
-	public Tnode visitExpr1(Expr1Context ctx) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitProcessTitle2(@NotNull awn1027Parser.ProcessTitle2Context ctx) { return visitChildren(ctx); }
 
-	@Override
-	public Tnode visitExpr2(Expr2Context ctx) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitProcessTitle1(@NotNull awn1027Parser.ProcessTitle1Context ctx) { return visitChildren(ctx); }
 
-	@Override
-	public Tnode visitBlock(BlockContext ctx) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitComparisonExpr1(@NotNull awn1027Parser.ComparisonExpr1Context ctx) { return visitChildren(ctx); }
 
-	@Override
-	public Tnode visitVar1(Var1Context ctx) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitMultExpr2(@NotNull awn1027Parser.MultExpr2Context ctx) { return visitChildren(ctx); }
 
-	@Override
-	public Tnode visitFuncCall2(FuncCall2Context ctx) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitComparisonExpr5(@NotNull awn1027Parser.ComparisonExpr5Context ctx) { return visitChildren(ctx); }
 
-	@Override
-	public Tnode visitVar2(Var2Context ctx) {
-		// TODO Auto-generated method stub
-		return null;
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitMultExpr1(@NotNull awn1027Parser.MultExpr1Context ctx){
+		Tnode node= new Tnode();
+		node.val = visit(ctx.notExpr()).val;
+		return node;
 	}
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitComparisonExpr4(@NotNull awn1027Parser.ComparisonExpr4Context ctx) { return visitChildren(ctx); }
 
-	@Override
-	public Tnode visitParamDeclList(ParamDeclListContext ctx) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitComparisonExpr3(@NotNull awn1027Parser.ComparisonExpr3Context ctx) { return visitChildren(ctx); }
 
-	@Override
-	public Tnode visitFuncCall1(FuncCall1Context ctx) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitMultExpr3(@NotNull awn1027Parser.MultExpr3Context ctx) { return visitChildren(ctx); }
 
-	@Override
-	public Tnode visitNotExpr(NotExprContext ctx) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitProcessDef(@NotNull awn1027Parser.ProcessDefContext ctx) { return visitChildren(ctx); }
 
-	@Override
-	public Tnode visitEventExpr3(EventExpr3Context ctx) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public Tnode visitComparisonExpr2(@NotNull awn1027Parser.ComparisonExpr2Context ctx) { return visitChildren(ctx); }
 
-	@Override
-	public Tnode visitEventExpr4(EventExpr4Context ctx) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Tnode visitEventExpr5(EventExpr5Context ctx) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Tnode visitFuncBlock(FuncBlockContext ctx) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Tnode visitAdditiveExpr(AdditiveExprContext ctx) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Tnode visitComparisonExpr(ComparisonExprContext ctx) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Tnode visitEventExpr1(EventExpr1Context ctx) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Tnode visitEventExpr2(EventExpr2Context ctx) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Tnode visitFuncdefine(FuncdefineContext ctx) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Tnode visitProcessTitle2(ProcessTitle2Context ctx) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Tnode visitProcessTitle1(ProcessTitle1Context ctx) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Tnode visitProcessDef(ProcessDefContext ctx) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 }

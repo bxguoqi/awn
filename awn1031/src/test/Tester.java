@@ -5,16 +5,16 @@ package test;
 
 import java.io.FileInputStream;
 
-import org.antlr.v4.runtime.CharStream;
-import org.antlr.v4.runtime.TokenStream;
 
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.tree.*;
 
+import base.Tnode;
+
 import antlr.MyVisitor;
+import antlr.awn1027BaseVisitor;
 import antlr.awn1027Lexer;
 import antlr.awn1027Parser;
-import antlr.awn1027Visitor;
 
 /**
  * @author Administrator
@@ -29,18 +29,18 @@ public class Tester {
 		// TODO Auto-generated method stub
 		
 		//create a Char Stream that reads from standard input
-		ANTLRInputStream input=new ANTLRInputStream(new FileInputStream("expr.awn"));
+		ANTLRInputStream input=new ANTLRInputStream(new FileInputStream("test.awn"));
 		//create a lexer that feeds off of input CharStream
 		awn1027Lexer lexer=new awn1027Lexer(input);
 		//create a buffer of tokens pulled from the lexer
 		CommonTokenStream tokens=new CommonTokenStream(lexer);
 		//create a parser that feeds off the tokens buffer
 		awn1027Parser parser=new awn1027Parser(tokens);
-		ParseTree tree=parser.start();//begin parsing at init rule
+		ParseTree tree=parser.additiveExpr(0);//begin parsing at init rule
 		
 		MyVisitor eval=new MyVisitor();
-		eval.visit(tree);
-		
+		int a = eval.visit(tree).val;
+		System.out.println("a = "+a);
 		System.out.println(tree.toStringTree(parser));//print LISP-style tree
 	}
 
